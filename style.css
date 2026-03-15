@@ -18,8 +18,15 @@ body {
     align-items: center;
     padding: 15px 40px;
     background: black;
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .navbar ul {
@@ -31,6 +38,7 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
@@ -45,22 +53,27 @@ body {
     align-items: center;
     background: linear-gradient(to right, #000, #1a1a1a);
     text-align: center;
+    padding-top: 80px;
 }
 
 .hero-content {
     max-width: 600px;
 }
 
+/*BUTTON*/
+
 .btn {
     margin-top: 20px;
-    padding: 12px 25px;
+    padding: 12px 28px;
     border: none;
     background: #00ff99;
     cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-button:hover {
+.btn:hover {
     background: white;
     color: black;
 }
@@ -68,7 +81,7 @@ button:hover {
 /* FEATURES */
 .features {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
     gap: 30px;
     padding: 100px 20px;
@@ -79,10 +92,12 @@ button:hover {
     padding: 30px;
     border-radius: 10px;
     transition: 0.3s;
+    border: 1px solid #2a2a2a;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
+    border-color: azure;
 }
 
 .highlight {
@@ -96,35 +111,42 @@ button:hover {
 
 /* CONTACT */
 .contact-section {
-    padding: 60px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 form {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 input {
-    width: 300px;
-    padding: 10px;
+    width: 320px;
+    padding: 12px;
     margin: 10px;
-    border: none;
+    border: 1px solid #333;
+    background: #111;
+    color: white;
+    border-radius: 5px;
     outline: none;
 }
 
 form button {
+    margin-top: 10px;
     padding: 10px 20px;
     border: none;
     background: #00ff99;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* FOOTER */
 footer {
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     background: black;
+    color: #aaa;
 }

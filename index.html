@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commit 3.0 Hard Mode</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,23 +10,28 @@
 <body>
 
 <header class="navbar">
-    <div class="logo">Commit-3.0</div>
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <div class="logo">Commit-3.0</div>
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+
 
 <section id="hero" class="hero">
     <div class="hero-content">
         <h1>Debug. Fix. Dominate.</h1>
         <p>Prove your frontend skills in Hard Mode.</p>
-        <button class="btn">Start Now</button>
+        <button type="button" class="btn">Start Now</button>
     </div>
 </section>
+
 
 <section id="features" class="features">
 
@@ -46,17 +52,26 @@
 
 </section>
 
-<section class="contact-section">
+
+<section id="contact" class="contact-section">
     <h2>Contact Us</h2>
+
     <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <button>Submit</button>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your Name" minlength="3" maxlength="20" required>
+
+        <br>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your Email" required><br><br>
+
+        <button type="submit">Submit</button>
     </form>
+
 </section>
 
+
 <footer>
-    <p>© Team-Oss 2026 </p>
+    <p>© Team-Oss 2026</p>
 </footer>
 
 </body>
